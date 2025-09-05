@@ -1,0 +1,159 @@
+1. Recepción y almacenamiento inicial
+
+Se guardaron las copias originales recibidas (CSV y XLSX) en un directorio data/raw/ sin modificar, y se creó una copia de trabajo en data/working/ para conservar el raw original.
+
+Se documentó la procedencia de cada archivo (nombre del fichero, fecha de recepción, fuente VESPA o sistema de vigilancia, formato y persona/institución remitente) en un archivo data/README.md.
+
+2. Revisión básica de formatos y encoding
+
+Se verificó el encoding de los archivos y se normalizó a UTF-8 para evitar problemas con caracteres acentuados y símbolos extraños (por ejemplo: MÃ¡rtires, Usaqu‚n, Ciudad Bol¡var).
+
+Se uniformaron los delimitadores (CSV con ; o ,) y los separadores decimales si era necesario.
+
+Se comprobó consistencia de tipos: columnas de conteos (CASOS) como numéricas enteras; columnas de año/mes/trimestre como enteras; columnas categóricas como texto.
+
+3. Normalización de nombres de variables y metadatos
+
+Se unificaron los nombres de variables entre las bases, usando minúsculas y guión bajo en lugar de espacios (p. ej. nombre_localidad, sitio_habitual_consumo_vivienda, agresor_consumospa).
+
+Se construyó un data dictionary describiendo cada variable (nombre, tipo, niveles esperados, valores especiales como “Sin dato”, rangos válidos, nota sobre interpretación). Este diccionario quedó en docs/data_dictionary.md.
+
+Se crearon alias y mapeos para variables equivalentes: por ejemplo NOMBREUPZ, NOMBRELOCALIDADRESIDENCIA y NOMBRE_LOCALIDAD se catalogaron como variables que describen localización y se definió la variable común nombre_localidad para análisis.
+
+4. Estandarización de códigos de localidad y georreferenciación
+
+Se buscó (y se registró) la tabla oficial de códigos de localidades/UPZ del municipio (formato DANE / códigos oficiales) y se creó una tabla de correspondencias entre los nombres tal como venían en cada base y el código oficial de localidad (codigo_localidad_dane).
+
+Se limpió la ortografía y se resolvieron variantes (por ejemplo: La Candelaria vs LA CANDELARIA, Mártires con signos extraños) mediante operaciones de normalización (espacios, mayúsculas, eliminación de tildes), y se validaron manualmente los casos ambiguos.
+
+Se asoció cada registro a su código oficial; los registros no mapeables quedaron marcados y se listaron en un informe de verificación para revisión adicional.
+
+Se descargaron/registraron shapefiles oficiales de Bogotá (si estuvieron disponibles) y se georreferenciaron los codigo_localidad para futuras visualizaciones espaciales.
+
+5. Alineación temporal (misma escala de tiempo)
+
+Se definió la unidad temporal primaria: año (por estabilidad y disponibilidad en ambas bases).
+
+Cuando fue necesario, se agregaron trimestres/meses a años; para la base de consumo que tenía mes/trimestre se confirmó la concordancia y se sumaron los casos por año y nombre_localidad.
+
+Se verificó que todas las entradas tuvieran año válido; registros con años fuera del rango de estudio (2015–2024 preliminar) se documentaron y se excluyeron del dataset final.
+
+6. Limpieza y tratamiento de valores faltantes
+
+Se exploró exhaustivamente la presencia de valores faltantes por variable, calculando el porcentaje de missing en cada columna y visualizando patrones de missingness (por variable, por año, por localidad).
+
+Se categorizaron variables según el porcentaje de missing:
+
+Variables con < 5% missing: se evaluó imputación simple (media/mediana/moda según tipo) o eliminación de registros si la variable no era esencial y el registro no aportaba a otras variables críticas.
+
+Variables con 5–30% missing: se consideró imputación múltiple (MICE) para variables sociodemográficas importantes; se documentó el método de imputación elegido y se comparó distribución antes/después para asegurarse de que la imputación no cambiara el sentido.
+
+Variables con > 30% missing: se consideró su exclusión del análisis multivariado principal o su uso sólo en análisis descriptivos con categoría no_reporta.
+
+Se unificaron las distintas formas de “no respuesta” (Sin dato, Sin Dato, 99. Sin dato, Sin dato ) y se recodificaron a NA o a la categoría no_reporta según conveniencia analítica; este proceso se detalló en el diccionario.
+
+Para variables binarias críticas (p. ej. agresor_consumospa, victima_consumospa) se priorizó mantener la información observada y se creó una categoría explícita no_reporta cuando la ausencia podía inducir sesgo.
+
+7. Detección y tratamiento de errores de coherencia lógica
+
+Se implementaron reglas de consistencia para detectar errores manifiestos:
+
+Edades negativas o fuera de rango plausible (por ejemplo > 120) se marcaron.
+
+gestante = 1 en registros con sexo = Hombres se identificó como discrepancia y se revisó caso por caso; si no se pudo corregir, se dejó como inconsistencia_gestacion y se documentó.
+
+Registros donde nivel_educativo y curso_de_vida eran incompatibles (p. ej. “Primera Infancia” y “Universidad completa”) se listaron para verificación.
+
+Para cada inconsistencia se siguió la jerarquía: (a) corregir si la información podía inferirse a partir de otras variables; (b) marcar como NA si no se podía reparar; (c) dejar registro original pero anotar en la columna flag_inconsistencia para poder excluirlo en análisis de sensibilidad.
+
+Se corrigieron errores de digitación obvios cuando pudo confirmarse (p. ej. MÃ¡rtires → Mártires) y se dejó registro de la corrección.
+
+8. Detección y manejo de outliers
+
+Para variables numéricas (p. ej. CASOS por localidad–año) se exploró la distribución y se identificaron outliers con métodos gráficos (boxplots) y métricas robustas (IQR, percentiles).
+
+Se revisó cada outlier identificado: si correspondía a error de entrada se corrigió o se eliminó; si correspondía a un evento real extremo (por ejemplo, brote o gran incremento en reportes por campaña) se conservó pero se etiquetó como extremo_real para análisis posteriores.
+
+Para análisis sensibles a outliers (p. ej. regresiones lineales) se planificó usar transformaciones (log) o modelos robustos / modelos de conteo adecuados (Poisson/NegBin) en lugar de eliminar valores reales.
+
+Si se decidió winsorizar alguna variable para análisis específicos, se documentó el umbral y se incluyó el análisis sin winsorización como comparación.
+
+9. Unificación y recodificación de categorías
+
+Se estandarizaron las categorías de variables categóricas (p. ej. sexo: Hombres, Mujeres; estrato: 1,2,3,4,5,6; tipoaseguramiento: Contributivo, Subsidiado, Vinculado, Otro).
+
+Se agrupó niveles con baja frecuencia en Otros cuando fuera necesario para estabilidad estadística (por ejemplo, niveles étnicos con <1% de frecuencias agrupados como Otras_etnias), manteniendo un registro de las agrupaciones.
+
+Para variables ordinales (nivel_educativo) se definieron códigos numéricos coherentes para facilitar análisis (p. ej. 1 = No fue a la escuela; ...; 10 = Universidad completa) y se documentó la ordenación.
+
+10. Agregación y cálculo de denominadores (tasas)
+
+Se obtuvieron (y documentaron) las proyecciones/anexos de población por localidad y año desde la fuente oficial (DANE u otra fuente municipal) para usar como denominador en cálculo de tasas.
+
+Se agregaron los registros individuales a nivel localidad–año:
+
+casos_consumo_localidad_año = sum(CASOS) en la base de consumo.
+
+casos_violencia_localidad_año = count(registros) o suma de un campo contador si existía en la base de violencia.
+
+Se calcularon las tasas por 100.000 habitantes: tasa_consumo = (casos_consumo_localidad_año / poblacion_localidad_año) * 100000 y tasa_violencia = (casos_violencia_localidad_año / poblacion_localidad_año) * 100000.
+
+Se verificó que los denominadores no fueran cero; en localidades con población muy baja se añadió un flag poblacion_baja y se consideró mascaramiento de resultados por confidencialidad.
+
+11. Uniones (joins) entre bases y manejo de registros no coincidentes
+
+Se definió la clave de unión: codigo_localidad + año. Se eligió un left join desde la tabla de localidades por año para conservar localidades con cero casos en alguna de las tablas.
+
+Se registraron y revisaron los registros que no coincidieron (localidades presentes en una base y ausentes en la otra); se verificó si se debía imputar ceros (ausencia de casos) o marcar como no_informado.
+
+Se creó una tabla maestra localidad_ano_master con columnas de ambos orígenes (casos_consumo, casos_violencia, poblacion, indicadores socioeconómicos agregados).
+
+12. Transformaciones y normalizaciones para análisis posteriores
+
+Se generaron variables derivadas:
+
+Proporciones de sitio_habitual_consumo_* respecto al total de casos por localidad (p. ej. %_consumo_en_bares = sum(bars_cases)/casos_total_localidad).
+
+Índices compuestos (por ejemplo, indice_vulnerabilidad usando % estrato 1–2, % nivel educativo bajo).
+
+Indicadores binarios (p. ej. alta_violencia si tasa_violencia > mediana).
+
+Para análisis de clustering y regresión con variables continuas se estandarizaron variables (z-score) y se documentó qué variables fueron estandarizadas.
+
+Se aplicó transformación logarítmica a tasas muy sesgadas (log(tasa + 0.1)) cuando fue necesario, con nota en el diccionario.
+
+13. Privacidad y anonimización
+
+Se verificó que los datos individuales no contuvieran identificadores personales directos. Cuando existió riesgo de identificación por conteos pequeños en localidades se aplicó enmascaramiento (por ejemplo, reemplazo de conteos < 5 por <5 o uso de agregaciones más grandes) para proteger la privacidad.
+
+Se documentó el tratamiento de confidencialidad y se dejó un registro de las decisiones para el informe de ética.
+
+14. Control de calidad final y QA
+
+Se generaron reportes automáticos (resúmenes) con conteos por variable, por año y por localidad, y se revisaron manualmente las inconsistencias más relevantes.
+
+Se hicieron tablas comparativas pre y post-imputación para comprobar que las imputaciones no distorsionaran distribuciones clave.
+
+Se calculó la correlación entre casos_consumo y casos_violencia preliminarmente para detectar errores de merge (valores extremos o correlaciones imposibles).
+
+Se elaboró un log de cambios (docs/data_changes_log.md) donde se registraron todas las transformaciones, criterios y decisiones (fechas, persona responsable y justificación).
+
+15. Versionamiento y reproducibilidad
+
+Se guardó la versión final del dataset preparado en data/processed/localidad_ano_vespa_violencia_v1.csv con un timestamp.
+
+Se dejó toda la documentación necesaria para reproducir los pasos (README, data dictionary, log de cambios y descripción de las imputaciones).
+
+Se organizaron los scripts de limpieza y los resultados en un repositorio con control de versiones (ej. Git), y se registró la versión del dataset utilizada en los análisis.
+
+16. Análisis de sensibilidad inicial
+
+Se planificaron y ejecutaron análisis de sensibilidad comparando: (a) dataset completo vs dataset sin registros con flag_inconsistencia; (b) imputación múltiple vs eliminación de casos con missing; (c) modelos con y sin winsorización de outliers.
+
+Se documentaron diferencias relevantes en estimaciones para decidir qué alternativas reportar en el informe final.
+
+Notas finales
+
+Todas las decisiones se documentaron para transparencia y replicabilidad.
+
+Se dejó preparado un anexo con las observaciones puntuales (registros no mapeables, inconsistencias críticas) que requerirían validación con la entidad proveedora si se quisiera corregir de forma definitiva.

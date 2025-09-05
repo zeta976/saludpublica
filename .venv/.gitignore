@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+
+# Virtual env
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode/IDE
+.vscode/
+.idea/
+
+# Data
+data/raw/
+data/working/*.utf8.csv
+data/working/*.utf-8.csv
+data/working/*.parquet
+data/working/poblacion_localidad_anio.csv
+
+# Reports and figures can be tracked; comment these out if too large
+# docs/figs/

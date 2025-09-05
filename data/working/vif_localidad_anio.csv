@@ -1,0 +1,201 @@
+nombre_localidad,anio,casos_violencia
+antonio nariño,2015,344
+antonio nariño,2016,290
+antonio nariño,2017,294
+antonio nariño,2018,344
+antonio nariño,2019,436
+antonio nariño,2020,266
+antonio nariño,2021,346
+antonio nariño,2022,435
+antonio nariño,2023,402
+antonio nariño,2024,408
+barrios unidos,2015,610
+barrios unidos,2016,465
+barrios unidos,2017,423
+barrios unidos,2018,428
+barrios unidos,2019,352
+barrios unidos,2020,280
+barrios unidos,2021,362
+barrios unidos,2022,514
+barrios unidos,2023,644
+barrios unidos,2024,747
+bosa,2015,5225
+bosa,2016,4365
+bosa,2017,3224
+bosa,2018,3488
+bosa,2019,4149
+bosa,2020,3169
+bosa,2021,3456
+bosa,2022,4775
+bosa,2023,5820
+bosa,2024,6452
+chapinero,2015,421
+chapinero,2016,307
+chapinero,2017,360
+chapinero,2018,401
+chapinero,2019,380
+chapinero,2020,229
+chapinero,2021,332
+chapinero,2022,520
+chapinero,2023,543
+chapinero,2024,631
+ciudad bolívar,2015,4222
+ciudad bolívar,2016,4525
+ciudad bolívar,2017,4786
+ciudad bolívar,2018,5011
+ciudad bolívar,2019,4330
+ciudad bolívar,2020,3424
+ciudad bolívar,2021,4321
+ciudad bolívar,2022,5778
+ciudad bolívar,2023,6407
+ciudad bolívar,2024,6902
+engativá,2015,2388
+engativá,2016,2003
+engativá,2017,2113
+engativá,2018,2180
+engativá,2019,2232
+engativá,2020,1578
+engativá,2021,2423
+engativá,2022,3570
+engativá,2023,3957
+engativá,2024,4450
+fontibón,2015,1232
+fontibón,2016,1213
+fontibón,2017,931
+fontibón,2018,857
+fontibón,2019,989
+fontibón,2020,898
+fontibón,2021,1121
+fontibón,2022,1511
+fontibón,2023,1803
+fontibón,2024,1877
+kennedy,2015,3830
+kennedy,2016,3410
+kennedy,2017,2860
+kennedy,2018,3234
+kennedy,2019,4163
+kennedy,2020,3190
+kennedy,2021,4238
+kennedy,2022,5664
+kennedy,2023,6334
+kennedy,2024,7039
+la candelaria,2015,125
+la candelaria,2016,105
+la candelaria,2017,100
+la candelaria,2018,109
+la candelaria,2019,136
+la candelaria,2020,83
+la candelaria,2021,109
+la candelaria,2022,166
+la candelaria,2023,135
+la candelaria,2024,122
+puente aranda,2015,783
+puente aranda,2016,680
+puente aranda,2017,628
+puente aranda,2018,687
+puente aranda,2019,909
+puente aranda,2020,623
+puente aranda,2021,767
+puente aranda,2022,1026
+puente aranda,2023,1293
+puente aranda,2024,1522
+rafael uribe uribe,2015,2129
+rafael uribe uribe,2016,1973
+rafael uribe uribe,2017,1923
+rafael uribe uribe,2018,2199
+rafael uribe uribe,2019,2466
+rafael uribe uribe,2020,1353
+rafael uribe uribe,2021,1711
+rafael uribe uribe,2022,2294
+rafael uribe uribe,2023,2028
+rafael uribe uribe,2024,2347
+san cristóbal,2015,2884
+san cristóbal,2016,2039
+san cristóbal,2017,1994
+san cristóbal,2018,2177
+san cristóbal,2019,2899
+san cristóbal,2020,1481
+san cristóbal,2021,2030
+san cristóbal,2022,2481
+san cristóbal,2023,2372
+san cristóbal,2024,2487
+santa fe,2015,637
+santa fe,2016,524
+santa fe,2017,631
+santa fe,2018,713
+santa fe,2019,862
+santa fe,2020,496
+santa fe,2021,662
+santa fe,2022,821
+santa fe,2023,732
+santa fe,2024,788
+suba,2015,3282
+suba,2016,2817
+suba,2017,2651
+suba,2018,3173
+suba,2019,3013
+suba,2020,2215
+suba,2021,3267
+suba,2022,4881
+suba,2023,5574
+suba,2024,6622
+sumapaz,2015,200
+sumapaz,2016,135
+sumapaz,2017,66
+sumapaz,2018,111
+sumapaz,2019,65
+sumapaz,2020,72
+sumapaz,2021,80
+sumapaz,2022,68
+sumapaz,2023,66
+sumapaz,2024,46
+teusaquillo,2015,283
+teusaquillo,2016,253
+teusaquillo,2017,245
+teusaquillo,2018,326
+teusaquillo,2019,403
+teusaquillo,2020,279
+teusaquillo,2021,398
+teusaquillo,2022,549
+teusaquillo,2023,585
+teusaquillo,2024,702
+tunjuelito,2015,626
+tunjuelito,2016,539
+tunjuelito,2017,836
+tunjuelito,2018,821
+tunjuelito,2019,881
+tunjuelito,2020,768
+tunjuelito,2021,766
+tunjuelito,2022,1039
+tunjuelito,2023,1135
+tunjuelito,2024,1191
+usaquén,2015,2798
+usaquén,2016,2366
+usaquén,2017,2007
+usaquén,2018,1398
+usaquén,2019,1130
+usaquén,2020,861
+usaquén,2021,1117
+usaquén,2022,1666
+usaquén,2023,1930
+usaquén,2024,2190
+usme,2015,2944
+usme,2016,2468
+usme,2017,2365
+usme,2018,2504
+usme,2019,2367
+usme,2020,2052
+usme,2021,2345
+usme,2022,3007
+usme,2023,3550
+usme,2024,3936
+,2015,495
+,2016,425
+,2017,514
+,2018,549
+,2019,715
+,2020,332
+,2021,489
+,2022,553
+,2023,569
+,2024,611

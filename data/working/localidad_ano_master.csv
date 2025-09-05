@@ -1,0 +1,191 @@
+nombre_localidad,anio,casos_consumo,casos_violencia,en_psicoactivas,en_vif
+antonio nariño,2015,54,344,True,True
+antonio nariño,2016,67,290,True,True
+antonio nariño,2017,82,294,True,True
+antonio nariño,2018,117,344,True,True
+antonio nariño,2019,236,436,True,True
+antonio nariño,2020,138,266,True,True
+antonio nariño,2021,112,346,True,True
+antonio nariño,2022,139,435,True,True
+antonio nariño,2023,111,402,True,True
+antonio nariño,2024,182,408,True,True
+barrios unidos,2015,104,610,True,True
+barrios unidos,2016,60,465,True,True
+barrios unidos,2017,79,423,True,True
+barrios unidos,2018,104,428,True,True
+barrios unidos,2019,96,352,True,True
+barrios unidos,2020,107,280,True,True
+barrios unidos,2021,292,362,True,True
+barrios unidos,2022,290,514,True,True
+barrios unidos,2023,302,644,True,True
+barrios unidos,2024,212,747,True,True
+bosa,2015,3059,5225,True,True
+bosa,2016,912,4365,True,True
+bosa,2017,264,3224,True,True
+bosa,2018,224,3488,True,True
+bosa,2019,772,4149,True,True
+bosa,2020,456,3169,True,True
+bosa,2021,690,3456,True,True
+bosa,2022,781,4775,True,True
+bosa,2023,709,5820,True,True
+bosa,2024,903,6452,True,True
+chapinero,2015,251,421,True,True
+chapinero,2016,97,307,True,True
+chapinero,2017,83,360,True,True
+chapinero,2018,138,401,True,True
+chapinero,2019,236,380,True,True
+chapinero,2020,200,229,True,True
+chapinero,2021,411,332,True,True
+chapinero,2022,187,520,True,True
+chapinero,2023,339,543,True,True
+chapinero,2024,429,631,True,True
+ciudad bolívar,2015,1719,4222,True,True
+ciudad bolívar,2016,584,4525,True,True
+ciudad bolívar,2017,519,4786,True,True
+ciudad bolívar,2018,286,5011,True,True
+ciudad bolívar,2019,771,4330,True,True
+ciudad bolívar,2020,444,3424,True,True
+ciudad bolívar,2021,574,4321,True,True
+ciudad bolívar,2022,450,5778,True,True
+ciudad bolívar,2023,526,6407,True,True
+ciudad bolívar,2024,838,6902,True,True
+engativá,2015,393,2388,True,True
+engativá,2016,316,2003,True,True
+engativá,2017,239,2113,True,True
+engativá,2018,283,2180,True,True
+engativá,2019,476,2232,True,True
+engativá,2020,317,1578,True,True
+engativá,2021,954,2423,True,True
+engativá,2022,725,3570,True,True
+engativá,2023,860,3957,True,True
+engativá,2024,1107,4450,True,True
+fontibón,2015,479,1232,True,True
+fontibón,2016,158,1213,True,True
+fontibón,2017,147,931,True,True
+fontibón,2018,138,857,True,True
+fontibón,2019,434,989,True,True
+fontibón,2020,324,898,True,True
+fontibón,2021,715,1121,True,True
+fontibón,2022,753,1511,True,True
+fontibón,2023,426,1803,True,True
+fontibón,2024,490,1877,True,True
+kennedy,2015,863,3830,True,True
+kennedy,2016,593,3410,True,True
+kennedy,2017,394,2860,True,True
+kennedy,2018,358,3234,True,True
+kennedy,2019,976,4163,True,True
+kennedy,2020,534,3190,True,True
+kennedy,2021,867,4238,True,True
+kennedy,2022,903,5664,True,True
+kennedy,2023,858,6334,True,True
+kennedy,2024,1185,7039,True,True
+la candelaria,2015,67,125,True,True
+la candelaria,2016,30,105,True,True
+la candelaria,2017,55,100,True,True
+la candelaria,2018,102,109,True,True
+la candelaria,2019,236,136,True,True
+la candelaria,2020,228,83,True,True
+la candelaria,2021,116,109,True,True
+la candelaria,2022,277,166,True,True
+la candelaria,2023,306,135,True,True
+la candelaria,2024,293,122,True,True
+puente aranda,2015,844,783,True,True
+puente aranda,2016,756,680,True,True
+puente aranda,2017,364,628,True,True
+puente aranda,2018,183,687,True,True
+puente aranda,2019,330,909,True,True
+puente aranda,2020,506,623,True,True
+puente aranda,2021,619,767,True,True
+puente aranda,2022,791,1026,True,True
+puente aranda,2023,469,1293,True,True
+puente aranda,2024,463,1522,True,True
+rafael uribe uribe,2015,709,2129,True,True
+rafael uribe uribe,2016,308,1973,True,True
+rafael uribe uribe,2017,266,1923,True,True
+rafael uribe uribe,2018,242,2199,True,True
+rafael uribe uribe,2019,517,2466,True,True
+rafael uribe uribe,2020,342,1353,True,True
+rafael uribe uribe,2021,241,1711,True,True
+rafael uribe uribe,2022,319,2294,True,True
+rafael uribe uribe,2023,293,2028,True,True
+rafael uribe uribe,2024,374,2347,True,True
+san cristóbal,2015,1569,2884,True,True
+san cristóbal,2016,1000,2039,True,True
+san cristóbal,2017,315,1994,True,True
+san cristóbal,2018,198,2177,True,True
+san cristóbal,2019,270,2899,True,True
+san cristóbal,2020,208,1481,True,True
+san cristóbal,2021,410,2030,True,True
+san cristóbal,2022,533,2481,True,True
+san cristóbal,2023,332,2372,True,True
+san cristóbal,2024,399,2487,True,True
+santa fe,2015,239,637,True,True
+santa fe,2016,431,524,True,True
+santa fe,2017,410,631,True,True
+santa fe,2018,849,713,True,True
+santa fe,2019,489,862,True,True
+santa fe,2020,381,496,True,True
+santa fe,2021,671,662,True,True
+santa fe,2022,875,821,True,True
+santa fe,2023,740,732,True,True
+santa fe,2024,611,788,True,True
+suba,2015,1462,3282,True,True
+suba,2016,1394,2817,True,True
+suba,2017,439,2651,True,True
+suba,2018,361,3173,True,True
+suba,2019,676,3013,True,True
+suba,2020,414,2215,True,True
+suba,2021,1100,3267,True,True
+suba,2022,760,4881,True,True
+suba,2023,856,5574,True,True
+suba,2024,976,6622,True,True
+sumapaz,2015,1,200,True,True
+sumapaz,2021,1,80,True,True
+sumapaz,2022,1,68,True,True
+sumapaz,2023,1,66,True,True
+sumapaz,2024,1,46,True,True
+teusaquillo,2015,166,283,True,True
+teusaquillo,2016,123,253,True,True
+teusaquillo,2017,194,245,True,True
+teusaquillo,2018,138,326,True,True
+teusaquillo,2019,218,403,True,True
+teusaquillo,2020,158,279,True,True
+teusaquillo,2021,535,398,True,True
+teusaquillo,2022,324,549,True,True
+teusaquillo,2023,356,585,True,True
+teusaquillo,2024,412,702,True,True
+tunjuelito,2015,363,626,True,True
+tunjuelito,2016,411,539,True,True
+tunjuelito,2017,365,836,True,True
+tunjuelito,2018,150,821,True,True
+tunjuelito,2019,524,881,True,True
+tunjuelito,2020,469,768,True,True
+tunjuelito,2021,330,766,True,True
+tunjuelito,2022,239,1039,True,True
+tunjuelito,2023,207,1135,True,True
+tunjuelito,2024,258,1191,True,True
+usaquén,2015,137,2798,True,True
+usaquén,2016,312,2366,True,True
+usaquén,2017,186,2007,True,True
+usaquén,2018,189,1398,True,True
+usaquén,2019,400,1130,True,True
+usaquén,2020,285,861,True,True
+usaquén,2021,516,1117,True,True
+usaquén,2022,375,1666,True,True
+usaquén,2023,325,1930,True,True
+usaquén,2024,467,2190,True,True
+usme,2015,1456,2944,True,True
+usme,2016,1043,2468,True,True
+usme,2017,341,2365,True,True
+usme,2018,155,2504,True,True
+usme,2019,625,2367,True,True
+usme,2020,398,2052,True,True
+usme,2021,403,2345,True,True
+usme,2022,271,3007,True,True
+usme,2023,345,3550,True,True
+usme,2024,569,3936,True,True
+sumapaz,2016,0,135,False,True
+sumapaz,2017,0,66,False,True
+sumapaz,2018,0,111,False,True
+sumapaz,2019,0,65,False,True
+sumapaz,2020,0,72,False,True
