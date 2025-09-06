@@ -1,21 +1,191 @@
 nombre_localidad,anio,poblacion
-usaquén,2015,
-chapinero,2015,
-santa fe,2015,
-san cristóbal,2015,
-usme,2015,
-tunjuelito,2015,
-bosa,2015,
-kennedy,2015,
-fontibón,2015,
-engativá,2015,
-suba,2015,
-barrios unidos,2015,
-teusaquillo,2015,
-los mártires,2015,
-antonio nariño,2015,
-puente aranda,2015,
-la candelaria,2015,
-rafael uribe uribe,2015,
-ciudad bolívar,2015,
-sumapaz,2015,
+antonio nariño,2015,37925.0
+antonio nariño,2016,37925.0
+antonio nariño,2017,37925.0
+antonio nariño,2018,37925.0
+antonio nariño,2019,38097.0
+antonio nariño,2020,38539.0
+antonio nariño,2021,38419.0
+antonio nariño,2022,38750.0
+antonio nariño,2023,38960.0
+antonio nariño,2024,39218.0
+barrios unidos,2015,62070.0
+barrios unidos,2016,62070.0
+barrios unidos,2017,62070.0
+barrios unidos,2018,62070.0
+barrios unidos,2019,65700.0
+barrios unidos,2020,68978.0
+barrios unidos,2021,71269.0
+barrios unidos,2022,73779.0
+barrios unidos,2023,75950.0
+barrios unidos,2024,77967.0
+bosa,2015,334223.0
+bosa,2016,334223.0
+bosa,2017,334223.0
+bosa,2018,334223.0
+bosa,2019,340010.0
+bosa,2020,345148.0
+bosa,2021,351821.0
+bosa,2022,349432.0
+bosa,2023,351203.0
+bosa,2024,353078.0
+chapinero,2015,74402.0
+chapinero,2016,74402.0
+chapinero,2017,74402.0
+chapinero,2018,74402.0
+chapinero,2019,77991.0
+chapinero,2020,81436.0
+chapinero,2021,82993.0
+chapinero,2022,84779.0
+chapinero,2023,86201.0
+chapinero,2024,87517.0
+ciudad bolívar,2015,299144.0
+ciudad bolívar,2016,299144.0
+ciudad bolívar,2017,299144.0
+ciudad bolívar,2018,299144.0
+ciudad bolívar,2019,308746.0
+ciudad bolívar,2020,316525.0
+ciudad bolívar,2021,321703.0
+ciudad bolívar,2022,326034.0
+ciudad bolívar,2023,329690.0
+ciudad bolívar,2024,332994.0
+engativá,2015,374253.0
+engativá,2016,374253.0
+engativá,2017,374253.0
+engativá,2018,374253.0
+engativá,2019,379603.0
+engativá,2020,384107.0
+engativá,2021,385375.0
+engativá,2022,386382.0
+engativá,2023,387428.0
+engativá,2024,388871.0
+fontibón,2015,173463.0
+fontibón,2016,173463.0
+fontibón,2017,173463.0
+fontibón,2018,173463.0
+fontibón,2019,178158.0
+fontibón,2020,182187.0
+fontibón,2021,184457.0
+fontibón,2022,186689.0
+fontibón,2023,188605.0
+fontibón,2024,189984.0
+kennedy,2015,488032.0
+kennedy,2016,488032.0
+kennedy,2017,488032.0
+kennedy,2018,488032.0
+kennedy,2019,493558.0
+kennedy,2020,498446.0
+kennedy,2021,499553.0
+kennedy,2022,500515.0
+kennedy,2023,501861.0
+kennedy,2024,503962.0
+la candelaria,2015,9012.0
+la candelaria,2016,9012.0
+la candelaria,2017,9012.0
+la candelaria,2018,9012.0
+la candelaria,2019,9085.0
+la candelaria,2020,9154.0
+la candelaria,2021,9223.0
+la candelaria,2022,9292.0
+la candelaria,2023,9361.0
+la candelaria,2024,9430.0
+puente aranda,2015,117754.0
+puente aranda,2016,117754.0
+puente aranda,2017,117754.0
+puente aranda,2018,117754.0
+puente aranda,2019,120652.0
+puente aranda,2020,123056.0
+puente aranda,2021,124463.0
+puente aranda,2022,125963.0
+puente aranda,2023,127095.0
+puente aranda,2024,128107.0
+rafael uribe uribe,2015,180338.0
+rafael uribe uribe,2016,180338.0
+rafael uribe uribe,2017,180338.0
+rafael uribe uribe,2018,180338.0
+rafael uribe uribe,2019,184454.0
+rafael uribe uribe,2020,187764.0
+rafael uribe uribe,2021,189226.0
+rafael uribe uribe,2022,190516.0
+rafael uribe uribe,2023,191448.0
+rafael uribe uribe,2024,192276.0
+san cristóbal,2015,186898.0
+san cristóbal,2016,186898.0
+san cristóbal,2017,186898.0
+san cristóbal,2018,186898.0
+san cristóbal,2019,189906.0
+san cristóbal,2020,192089.0
+san cristóbal,2021,193376.0
+san cristóbal,2022,194589.0
+san cristóbal,2023,195731.0
+san cristóbal,2024,196903.0
+santa fe,2015,51631.0
+santa fe,2016,51631.0
+santa fe,2017,51631.0
+santa fe,2018,51631.0
+santa fe,2019,52751.0
+santa fe,2020,53544.0
+santa fe,2021,53328.0
+santa fe,2022,53246.0
+santa fe,2023,53035.0
+santa fe,2024,52841.0
+suba,2015,542437.0
+suba,2016,542437.0
+suba,2017,542437.0
+suba,2018,542437.0
+suba,2019,561773.0
+suba,2020,578556.0
+suba,2021,590219.0
+suba,2022,600755.0
+suba,2023,610618.0
+suba,2024,619835.0
+sumapaz,2015,1601.0
+sumapaz,2016,1601.0
+sumapaz,2017,1601.0
+sumapaz,2018,1601.0
+sumapaz,2019,1682.0
+sumapaz,2020,1752.0
+sumapaz,2021,1816.0
+sumapaz,2022,1875.0
+sumapaz,2023,1926.0
+sumapaz,2024,1974.0
+teusaquillo,2015,67745.0
+teusaquillo,2016,67745.0
+teusaquillo,2017,67745.0
+teusaquillo,2018,67745.0
+teusaquillo,2019,69301.0
+teusaquillo,2020,71569.0
+teusaquillo,2021,72772.0
+teusaquillo,2022,71468.0
+teusaquillo,2023,69653.0
+teusaquillo,2024,68105.0
+tunjuelito,2015,83369.0
+tunjuelito,2016,83369.0
+tunjuelito,2017,83369.0
+tunjuelito,2018,83369.0
+tunjuelito,2019,85805.0
+tunjuelito,2020,87963.0
+tunjuelito,2021,88825.0
+tunjuelito,2022,89990.0
+tunjuelito,2023,90946.0
+tunjuelito,2024,91914.0
+usaquén,2015,246937.0
+usaquén,2016,246937.0
+usaquén,2017,246937.0
+usaquén,2018,246937.0
+usaquén,2019,253770.0
+usaquén,2020,260040.0
+usaquén,2021,262649.0
+usaquén,2022,266383.0
+usaquén,2023,269584.0
+usaquén,2024,272967.0
+usme,2015,176971.0
+usme,2016,176971.0
+usme,2017,176971.0
+usme,2018,176971.0
+usme,2019,183590.0
+usme,2020,189204.0
+usme,2021,193699.0
+usme,2022,197986.0
+usme,2023,201919.0
+usme,2024,205894.0
