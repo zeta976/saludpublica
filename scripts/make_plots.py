@@ -144,6 +144,47 @@ def plot_scatter_rates(df: pd.DataFrame):
     savefig(os.path.join(FIG_DIR, "scatter_tasas_consumo_vs_violencia.png"))
 
 
+def plot_panel_scatter_rates_colored(df: pd.DataFrame):
+    # Dispersión localidad–año coloreada por año con recta ajustada global
+    fig, ax = plt.subplots(figsize=(9, 7))
+    df2 = df.copy()
+    # Asegurar tipo string para leyenda discreta y evitar errores con Int64Dtype
+    df2["anio_str"] = df2["anio"].astype(str)
+    sns.scatterplot(
+        data=df2, x="tasa_consumo_100k", y="tasa_violencia_100k",
+        hue="anio_str", palette="viridis", alpha=0.7, ax=ax
+    )
+    # Línea de regresión global (simple) sobre todos los puntos
+    sns.regplot(
+        data=df, x="tasa_consumo_100k", y="tasa_violencia_100k",
+        scatter=False, color="red", ax=ax
+    )
+    ax.set_title("Localidad–año: consumo vs violencia con recta ajustada global")
+    ax.set_xlabel("Tasa de consumo (por 100.000)")
+    ax.set_ylabel("Tasa de violencia (por 100.000)")
+    ax.legend(title="Año", loc="best")
+    savefig(os.path.join(FIG_DIR, "reg_panel_scatter_tasas.png"))
+
+
+def plot_city_scatter_rates(df: pd.DataFrame):
+    # Agregar por año para Bogotá
+    city = df.groupby("anio", dropna=True).agg(
+        tasa_consumo_100k=("tasa_consumo_100k", "mean"),
+        tasa_violencia_100k=("tasa_violencia_100k", "mean"),
+    ).reset_index()
+    city["anio_str"] = city["anio"].astype(str)
+    fig, ax = plt.subplots(figsize=(8, 6))
+    sns.scatterplot(data=city, x="tasa_consumo_100k", y="tasa_violencia_100k", hue="anio_str", palette="magma", s=90, ax=ax)
+    sns.regplot(data=city, x="tasa_consumo_100k", y="tasa_violencia_100k", scatter=False, color="black", ax=ax)
+    for _, r in city.iterrows():
+        ax.text(r["tasa_consumo_100k"], r["tasa_violencia_100k"], str(int(r["anio"])), fontsize=8, ha="left", va="bottom")
+    ax.set_title("Bogotá (anual): relación entre tasas con ajuste lineal")
+    ax.set_xlabel("Tasa de consumo (por 100.000)")
+    ax.set_ylabel("Tasa de violencia (por 100.000)")
+    ax.legend(title="Año", loc="best")
+    savefig(os.path.join(FIG_DIR, "reg_city_scatter_tasas.png"))
+
+
 def plot_hexbin_rates(df: pd.DataFrame):
     # Densidad bivariada para ver estructura no lineal y colas
     fig, ax = plt.subplots(figsize=(7.5, 6))
@@ -227,6 +268,9 @@ def main():
         plot_hexbin_rates(df_rates)
         plot_corr_by_localidad(df_rates)
         plot_lagged_relationship(df_rates)
+        # Nuevas figuras solicitadas
+        plot_panel_scatter_rates_colored(df_rates)
+        plot_city_scatter_rates(df_rates)
     else:
         print("Advertencia: no se encontró archivo de tasas. Ejecuta scripts: prep_poblacion.py y compute_rates.py")
 
